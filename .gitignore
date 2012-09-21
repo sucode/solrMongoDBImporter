@@ -1,3 +1,6 @@
+.*
+!.gitignore
+target/
 *.class
 
 # Package Files #
