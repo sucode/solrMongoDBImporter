@@ -25,18 +25,20 @@ Thi is a MongoDB Data Importer for Solr.
 	<field column="title" name="title"/>
 	<!-- other fileds -->
 </entity>
-```xml
+```
 
 ### ObjectId transformer
 Somethime we need a Long docId, but we have ObjectId in MongoDB, so a transformer may help.
+
 This transfomer just cover the ObjectId to it's hashcode :-)
+
 ```xml
 <entity processor="MongoDBEntityProcessor" dataSource="mongod" name="test" collection="coll">
 	<field column="_id" name="docId" hashObjectId="true"/> <!-- docId has long type-->
 	<field column="title" name="title"/>
 	<!-- other fileds -->
 </entity>
-```xml
+```
 
 ### Put it together
 ```xml
